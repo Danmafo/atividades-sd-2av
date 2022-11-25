@@ -14,15 +14,15 @@ Atividades para 2° Avaliação do curso de Sistemas Distribuídos
   <li>http://localhost:8080/escola-api/aluno/curso/{nomeCurso}</li>
   <li>http://localhost:8080/escola-api/aluno</li>
   <pre>{
-	         "nome": "string",
-	         "curso": "string",
-	         "dataNascimento": "dd/MM/yyyy"
-        }</pre>
+  "nome": "string",
+  "curso": "string",
+  "dataNascimento": "dd/MM/yyyy"
+}</pre>
   <li>http://localhost:8080/escola-api/aluno/{id}</li>
   <pre>{
-	         "nome": "string",
-	         "curso": "string",
-	         "dataNascimento": "dd/MM/yyyy"
-        }</pre>
+  "nome": "string",
+  "curso": "string",
+  "dataNascimento": "dd/MM/yyyy"
+}</pre>
   <li>http://localhost:8080/escola-api/aluno/{id}</li>
 </ul>
