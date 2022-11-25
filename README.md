@@ -3,7 +3,7 @@ Atividades para 2° Avaliação do curso de Sistemas Distribuídos
 
 <h1>Atividade 1</h1>
 
-<p>Se encontra dentro da pasta resources, como <strong>index.html</strong></p>
+<p>Se encontra dentro da pasta <strong>atividades-sd-2av/src/main/resources/atividade1/index.html</strong></p>
 
 <h1>Atividade 2</h1>
 
