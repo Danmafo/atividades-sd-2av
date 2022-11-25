@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+	 $(function () {
+		$('#btnCallService').click(function () {
+			cnpj = $("#txtCNPJ").val();
+			$.ajax({ 
+				type: 'get',
+				url: 'https://certidoes-apf.apps.tcu.gov.br/api/rest/publico/certidoes/' + cnpj + '?seEmitirPDF=false',
+				cache: false,
+				dataType: 'json',
+				crossDomain: true,
+				contentType: 'application/json; charset=utf-8',
+				success: function (response) {
+					$('#lblData')
+					  .html( "<section class='panel panel-default'> "
+					        + "<p>" + response.razaoSocial + "</p>"
+							+ "<p>" + response.cnpj + "</p>"
+							+ "</section>");
+				},
+				error: function (error) {
+					 $('#lblData').html("<h5>  ** NAO ENCONTRADO ** </h5>");
+				}
+			});
+		});
+	});
+		
+  </script>
+  </head>
+  <body>
+	<div class="container">
+		<h3>Consulta CNPJ</h3>
+		<form>
+			CNPJ: <input type="text" id="txtCNPJ"><br>
+			<input type="button" id="btnCallService" value="Endereço">
+		</form>
+		<br>
+		<div id="lblData"></div>
+	</div>  
+
+  </body>
+</html>
